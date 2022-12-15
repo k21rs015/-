@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -10,12 +11,35 @@
     <script src = "keys.js"></script>
     <script>
     let ncmb = new NCMB(appKey, clientKey);
-    let UTdata = ncmb.DataStore("最終課題");
-    let key = "score";        
+    let UTdata = ncmb.DataStore("saisyuukadai");
+    let key = "score"; 
+
+    function enterData() {
+      let uTdata = new UTdata();
+      let value = parseInt($("#data").val());
+      uTdata.set(key, value)
+        .save()
+        .then(function(results) {
+          $("#display").removeClass();
+          $("#display").addClass("bg-success");
+          $("#display").html("enter success");
+        })
+        .catch(function(results) {
+          $("#display").removeClass();
+          $("#display").addClass("bg-warning");
+          $("#display").html("enter fail");
+        })
+    }           
     </script>
 </head>
+
 <body>
-	<br />
-    This is a template for Monaca app.
+    <h1 class="text-light bg-secondary">チーム分け</h1>
+    <div>
+        <input type="text" id="data" placeholder="名前">
+    </div>
+    <div>
+       <a onclick="enterData()" class="btn btn-outline-secondary" role="button">Enter</a>
+    </div>
 </body>
 </html>
