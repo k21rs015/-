@@ -8,12 +8,13 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src = "keys.js"></script>
+    <script src="keys.js"></script>
     <script>
     let ncmb = new NCMB(appKey, clientKey);
     let UTdata = ncmb.DataStore("saisyuukadai");
-    let key = "score"; 
-
+    let key = "name"; 
+    
+    /*
     function enterData() {
       let uTdata = new UTdata();
       let value = parseInt($("#data").val());
@@ -29,7 +30,8 @@
           $("#display").addClass("bg-warning");
           $("#display").html("enter fail");
         })
-    }           
+    }   
+    */
     </script>
 </head>
 
