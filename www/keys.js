@@ -1,0 +1,3 @@
+var appKey = "aceda7132f6c82f4f01ae9bc5e9ce38707c72f359e44a4d509adafa261019457";
+
+var clientKey = "2ff2dec6c9e0da959ca4afa6ed728b71211a674dc8906192bfe862170f3e2873";
