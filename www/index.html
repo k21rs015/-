@@ -14,7 +14,7 @@
     let UTdata = ncmb.DataStore("saisyuukadai");
     let key = "name"; 
     
-    function enterData() {
+    function nameData() {
       let uTdata = new UTdata();
       let value = parseInt($("#data").val());
       uTdata.set(key, value)
@@ -34,12 +34,23 @@
 </head>
 
 <body>
-    <h1 class="text-light bg-secondary">チーム分け</h1>
-    <div>
-        <input type="text" id="data" placeholder="名前">
-    </div>
-    <div>
-       <a onclick="enterData()" class="btn btn-outline-secondary" role="button">Enter</a>
-    </div>
+  <h1 class="text-light bg-secondary">mbaas update</h1>
+  <div>
+    <input type="text" id="data" placeholder="スコア">
+    <a onclick="enterData()" class="btn btn-outline-secondary" role="button">Enter</a>
+  </div>
+  <div>
+    <a onclick="fetchAll()" class="btn btn-outline-secondary" role="buton">Fetch All</a>
+    <a onclick="sortData()" class="btn btn-outline-secondary" role="button">Sort</a>
+    <a onclick="countData()" class="btn btn-outline-secondary" role="button">Count</a>
+    <a onclick="deleteData()" class="btn btn-outline-secondary" role="buton">Delete</a>
+  </div>
+  <div>
+    <input type="text" id="update" placeholder="更新">
+    <a onclick="updateData()" class="btn btn-outline-secondary" role="button">Update</a>
+  </div>
+  <div id="display" class="text-light bg-info">
+    Results
+  </div>
 </body>
 </html>
